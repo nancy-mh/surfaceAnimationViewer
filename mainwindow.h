@@ -15,8 +15,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    //objImageLoader objFileList_;
-    std::vector<std::string> openDir();
+    objImageLoader objFileList_;
+    //std::vector<std::string> openDir();
 
 
 

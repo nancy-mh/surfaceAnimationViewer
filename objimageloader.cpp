@@ -21,13 +21,25 @@ void objImageLoader::loadMesh(std::vector<std::string> objFileVec, bool stopOBJL
     //will contain x,y,z position of each face
     //OBJContainer meshData;
 
+    //this is a test to see if at least one thing will load
+    //std::string test = "/Users/nancy/Documents/spring2021/CSCI_5565_introComputerGraphics/project/surfaceAnimationViewer__/Sphere_Animation/sphere_000.obj";
+
+    //the entire path shoudnt matter right?
+    std::string test = "/Users/nancy/Documents/spring2021/CSCI_5565_introComputerGraphics/project/surfaceAnimationViewer__/Sphere_Animation/box_stack.e.obj";
+    objFileVec.push_back(test);
+
     for (meshNum; meshNum < objFileVec.size(); meshNum++)
     {
         // stop drawing meshes
-        if (stopOBJLoading = true)
-        { break;}
-        file_name = objFileVec[meshNum];
+//        if (stopOBJLoading == true)
+//        { break;}
+//        else
+//        {
+           file_name = objFileVec[meshNum];
+           //file_name =  "sphere_000.obj";
+//        }
     }
+
 
     // struct of obj image
     imageElements image;

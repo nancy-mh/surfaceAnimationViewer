@@ -13,6 +13,8 @@
 // global counter used to keep track of which mesh should be drawn
 int counter = 0;
 bool stopFlag = false;
+// used to initially draw when play is pressed
+//bool paint = false;
 
 customGLWidget::customGLWidget(QWidget *parent) : QOpenGLWidget(parent)
 {
@@ -54,10 +56,12 @@ void customGLWidget::resizeGL(int w, int h)
 void customGLWidget::draw()
 {
 
-   std::vector<std::string> tempVec;
-   tempVec = openFile.openDir();
+   //std::vector<std::string> tempVec;
+   //std::string test = "/Users/nancy/Documents/spring2021/CSCI_5565_introComputerGraphics/project/surfaceAnimationViewer__/Sphere_Animation/sphere_000.obj";
+   //tempVec.push_back(test);
+   //tempVec = openFile.openDir();
    //tempOBJFileVec = OBJContainer_.objFileVec;
-   OBJContainer_.loadMesh(tempVec,stopFlag, counter);
+   OBJContainer_.loadMesh(OBJContainer_.objFileVec,stopFlag, counter);
    glBegin(GL_TRIANGLES);
 
    // Go through each vertex and print its number,
@@ -86,7 +90,9 @@ void customGLWidget::paintGL()
        glMatrixMode(GL_MODELVIEW);
        glLoadIdentity();
        gluLookAt(0, 0, 1, 0, 0, 0, 0, 1, 0);
-       //draw ();
+       draw ();
+
+
 
 //       glBegin(GL_TRIANGLES);
 

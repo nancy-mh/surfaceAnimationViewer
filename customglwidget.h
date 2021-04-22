@@ -11,9 +11,11 @@ class customGLWidget : public QOpenGLWidget, protected QOpenGLFunctions
 public:
     customGLWidget(QWidget *parent = nullptr);
     objImageLoader OBJContainer_;
-    MainWindow openFile;
-    //void openDir();
+    //MainWindow openFile;
+    //void openDi// used to initially draw when play is pressed
+    bool paint = false;
     void draw();
+
 
 protected:
     void initializeGL() override;
